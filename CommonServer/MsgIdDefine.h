@@ -3,30 +3,20 @@
 
 
 
-//»´æ÷µƒœ˚œ¢∫≈∑∂Œß‘º∂®£∫
-#define    NONE_MODULE_MSGID_BASE               0              //Œﬁ∑ΩœÚ–‘µƒ–≈¡ÓΩªª•   0~499
+//ÂÖ®Â±ÄÁöÑÊ∂àÊÅØÂè∑ËåÉÂõ¥Á∫¶ÂÆöÔºö
+#define    NONE_MODULE_MSGID_BASE               0              //Êó†ÊñπÂêëÊÄßÁöÑ‰ø°‰ª§‰∫§‰∫í   0~499
 #define    PROPOSER_ACCEPTOR_MSGID_BASE         500            //   500~999
 
 
 enum MessageType
 {
 	//COMMON
-	PRO_SYS_HEART_REQ = NONE_MODULE_MSGID_BASE,        //œ˚œ¢ÃÂŒ™ø’
-	PRO_SYS_HEART_ACK = NONE_MODULE_MSGID_BASE + 1,    //œ˚œ¢ÃÂŒ™ø’
+	PRO_SYS_HEART_REQ = NONE_MODULE_MSGID_BASE,        //Ê∂àÊÅØ‰Ωì‰∏∫Á©∫
+	PRO_SYS_HEART_ACK = NONE_MODULE_MSGID_BASE + 1,    //Ê∂àÊÅØ‰Ωì‰∏∫Á©∫
 	START_CONNECT_REQ = NONE_MODULE_MSGID_BASE + 2,    //(SERVTYPE int, SERVPORT int, APPID int, SETID int,SERIAL_NO int)
 	START_CONNECT_ACK = NONE_MODULE_MSGID_BASE + 3,    //(SERVTYPE int, APPID int, SETID int, SERIAL_NO int)
 
-	TO_DC_LAUNCH_CONNECTION_NTY  = NONE_MODULE_MSGID_BASE + 4,        //(SERVTYPE int, SERIAL_NO int, APPID int, SETID int)
-	TO_DC_LOST_CONNNECTION_NTY = NONE_MODULE_MSGID_BASE + 5,          //(SERVTYPE int, SERIAL_NO int, APPID int, SETID int)
-
-	TO_DC_CONN_STAT_SYNC_NTY  = NONE_MODULE_MSGID_BASE + 6,
-
-	FROM_DC_LAUNCH_CONNECTION_CMD = NONE_MODULE_MSGID_BASE + 7,
-
-	FROM_DC_NOTIFY_CLOSE_CONNECTION_REQ = NONE_MODULE_MSGID_BASE + 8,   //(SERVTYPE int, APPID int, SETID int, SERIAL_NO int)
-	TO_DC_NOTIFY_CLOSE_CONNECTION_ACK = NONE_MODULE_MSGID_BASE + 9,     //(SERVTYPE int, SERIAL_NO int, APPID int, SETID int)
-
-	//proposer ”Î acceptorµƒΩªª•////////////////////////////////
+	//proposer ‰∏é acceptorÁöÑ‰∫§‰∫í////////////////////////////////
 	PROPOSER_ACCEPTOR_PREPARE_REQ = PROPOSER_ACCEPTOR_MSGID_BASE,
 	ACCEPTOR_PROPOSER_PREPARE_ACK = PROPOSER_ACCEPTOR_MSGID_BASE + 1,
 
@@ -35,13 +25,6 @@ enum MessageType
 	ACCEPTOR_PROPOSER_ACCEPT_NACK = PROPOSER_ACCEPTOR_MSGID_BASE + 4,
 
 	//BOARDCAST_MASTER_INFO_NTY = PROPOSER_ACCEPTOR_MSGID_BASE + 4,
-
-	
-	
-	
 };
-
-
-
 
 #endif
